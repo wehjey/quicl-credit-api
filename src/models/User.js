@@ -14,10 +14,10 @@ class User {
     const newUser = {
       id: uuid.v4(),
       email: data.email,
-      firstName: data.firstName,
-      lastName: data.lastName,
+      firstName: data.firstName || '',
+      lastName: data.lastName || '',
       password: passwordHash.generate(data.password),
-      address: data.address,
+      address: data.address || '',
       status: 'unverified',
       isAdmin: false,
       createdAt: moment.now(),
