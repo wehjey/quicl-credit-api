@@ -4,7 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node --exec babel-node src/server.js",
+    "build": "npm run clean && npm run build-babel",
+    "build-babel": "babel src -d build",
+    "clean": "rm -rf build .nyc_output coverage && mkdir build",
+    "coverage": "nyc report --reporter=text-lcov | coveralls && nyc report --reporter=lcov",
+    "start": "npm run build && node ./build/server.js",
     "test": "nyc --reporter=text mocha --require @babel/register --recursive"
   },
   "keywords": [],
