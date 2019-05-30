@@ -2,7 +2,7 @@
   "name": "my-quick-credit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node --exec babel-node src/server.js",
     "test": "mocha --require @babel/register --recursive"
@@ -16,6 +16,8 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/register": "^7.4.4",
     "assert": "^2.0.0",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.1",
     "babel-preset-airbnb": "^3.2.1",
     "chai-http": "^4.3.0",
