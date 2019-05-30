@@ -7,10 +7,8 @@
     "build": "npm run clean && npm run build-babel",
     "build-babel": "babel src -d build",
     "clean": "rm -rf build .nyc_output coverage && mkdir build",
-    "coverage": "nyc report --reporter=text-lcov | coveralls && nyc report --reporter=lcov",
-    "cover": "istanbul cover _mocha -- -u exports --require @babel/register",
     "start": "node --exec babel-node src/server.js",
-    "test": "nyc mocha ./test -r @babel/register  --exit"
+    "test": "nyc mocha --require @babel/register --recursive --exit"
   },
   "keywords": [],
   "author": "",
