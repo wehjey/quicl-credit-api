@@ -1,8 +1,8 @@
 import 'dotenv/config';
 import chai from 'chai';
 import chaiHttp from 'chai-http';
-import server from '../../src/server';
-import { correctUser, incorrectUser } from '../mock';
+import server from '../src/server';
+import { correctUser, incorrectUser } from './mock';
 
 const baseUrl = process.env.BASE_URL;
 
